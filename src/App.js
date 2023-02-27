@@ -7,8 +7,11 @@ import React, { useState } from 'react';
 function App() {
 
   const [input, setInput] = useState('');
+  
+  //variable para determinar si el componente ha sido seleccionado
   const [active, setActive] = React.useState(false);    
 
+  //función para enviar al componente y cambiar el estado de la variable y color del componente
   const activar = () => {
     setActive(!active);
   };
