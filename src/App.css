@@ -127,7 +127,7 @@
 .contenedor-horario{
   margin-top: 0px;  
   width: 90%;
-  height: 78%;
+  height: 95%;
   padding: 14px;
   background-color: #EEEEEE;
   border-radius: 20px;  
@@ -143,8 +143,8 @@
 
 .contenedor-grupo{  
   width: 100%;  
-  height: 25%;     
-  margin-top: 7%;
+  height: 35%;     
+  margin-bottom: 8px;
   justify-content: start;
   align-items: flex-start;
   display: flex;  
@@ -192,9 +192,9 @@ h1{
 
 .etiqueta2-2{  
   margin-top: 0.5px;
-  margin-left: 10px;
-  font-family: 'Fredoka';
-  font-style: normal;
+  margin-left: 7px;
+  /* font-family: 'Fredoka'; */
+  /* font-style: normal; */
   font-weight: bold;
   font-size: 20px;
   line-height: 17px;

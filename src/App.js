@@ -17,12 +17,13 @@ function App() {
   const [materias, setMaterias] = useState([]);
 
   //Grabar las materias del grupo seleccionado
-  const grabar = (id_materia, nombre, sigla, docente, horario) => {
+  const grabar = (id_materia, nombre, sigla, grupo, docente, horario) => {
     const materia = {
       id: id_materia,
       nombre_materia: nombre,
       horario_materia: horario,
       sigla_materia: sigla,
+      grupo_materia: grupo,
       docente_materia: docente,
     };
     const materiasActualizadas = [materia, ...materias];
@@ -57,70 +58,116 @@ function App() {
             Inscripcion de materias
           </p>
         </div>
-        <div className="contenedor2">
-          <p className="etiqueta2">Materias a inscribir:</p>
-          {materias.map((materia) => {
-            return (
-              <Materia
-                eliminar={eliminarMateria}
-                id={materia.id}
-                nombre={materia.nombre_materia}
-                sigla={materia.sigla_materia}
-                docente={materia.docente_materia}
-                horario={materia.horario_materia}
-              />
-            );
-          })}
-        </div>
-        <div className="contenedor3">
-          <div className="grupos-materia">
-            <p className="etiqueta1">Grupos de Materia:</p>
-            {datos_materias.map((materia) => {
-              if (id_materia == materia.id) {
-                return (
-                  <p className="etiqueta2-2">
-                    {" "}
-                    {materia.sigla} | {materia.nombre}
-                  </p>
-                );
-              }
-            })}
-          </div>
-          {datos_grupos.map((grupo) => {
-            if (id_materia == grupo.idMateria) {
-              return (
-                <Grupos
-                  activar={activar_grupo}
-                  grabar={grabar}
-                  id_grupo={id_grupo}
-                  id={grupo.id}
-                  id_materia={grupo.idMateria}
-                  grupo={grupo.grupo}
-                  nombre={grupo.nombre}
-                  sigla={grupo.sigla}
-                  horario={grupo.horaString}
-                  docente={grupo.profe}
-                  cupo={grupo.cupos}
-                />
-              );
-            }
-          })}
-        </div>
-      </div>
-      <div className="area2">
-        <div className="contenedor-horario">
-          <p className="etiqueta2">Vista Horario</p>
-          <div className="vista-horario">
-            <div className="encabezado-horario">
-              <div>Horario</div>
-              <div>Lunes</div>
-              <div>Martes</div>
-              <div>Miercoles</div>
-              <div>Jueves</div>
-              <div>Viernes</div>
-              <div>Sabado</div>
+
+        <div className="flex h-h95 grid-cols-2  items-center">
+          <div className="flex-col  h-full w-w55">
+            <div className="flex h-3/5 grid-cols-2  p-2 justify-around">
+              {/* cuadro 1 */}
+              <div className="flex-col w-1/2 bg-bg-primary my-0 mx-4 p-2 rounded-2xl shadow-md border items-center justify-center">
+                <p className="text-xs font-normal text-black ml-2 mb-2">
+                  {/* etiqueta 1 */}
+                  Seleccione la materia para ver sus grupos:
+                </p>
+                <div className="contenedor1">
+                  {datos_materias.map((materia) => {
+                    return (
+                      <Materias
+                        activar={activar}
+                        id_materia={id_materia}
+                        id={materia.id}
+                        sigla={materia.sigla}
+                        nombre={materia.nombre}
+                        semestre={materia.semestre}
+                      />
+                    );
+                  })}
+                </div>
+              </div>
+
+              {/* cuadro 2 */}
+              <div className="flex-col w-1/2 bg-bg-primary my-0 mx-4 p-2 rounded-2xl shadow-md border items-center justify-center ">
+                <p className="text-xs font-bold text-black ml-2 mb-2 ">
+                  {/* etiqueta 2 */}
+                  Materias a inscribir:
+                </p>
+                <div className="contenedor1">
+                  {materias.map((materia) => {
+                    return (
+                      <Materia
+                        eliminar={eliminarMateria}
+                        id={materia.id}
+                        nombre={materia.nombre_materia}
+                        sigla={materia.sigla_materia}
+                        grupo={materia.grupo_materia}
+                        docente={materia.docente_materia}
+                        horario={materia.horario_materia}
+                      />
+                    );
+                  })}
+                </div>
+              </div>
             </div>
-            <Horario />
+
+            {/* cuadro 3 */}
+            <div className="flex-col  h-1/3  bg-bg-primary mt-5 mx-6 p-2 rounded-2xl shadow-md border items-start justify-center">
+              <div className="flex mb-1">
+                <p className="text-xs font-normal text-black ml-2 mb-2">
+                  {/* etiqueta 1 */}
+                  Grupos de la materia:
+                </p>
+
+                {datos_materias.map((materia) => {
+                  if (id_materia == materia.id) {
+                    return (
+                      <p className="etiqueta2-2">
+                        {materia.sigla} | {materia.nombre}
+                      </p>
+                    );
+                  }
+                })}
+              </div>
+
+              <div className="contenedor3">
+                {datos_grupos.map((grupo) => {
+                  if (id_materia == grupo.idMateria) {
+                    return (
+                      <Grupos
+                        activar={activar_grupo}
+                        grabar={grabar}
+                        id_grupo={id_grupo}
+                        id={grupo.id}
+                        id_materia={grupo.idMateria}
+                        grupo={grupo.grupo}
+                        nombre={grupo.nombre}
+                        sigla={grupo.sigla}
+                        horario={grupo.horaString}
+                        docente={grupo.profe}
+                        cupo={grupo.cupos}
+                      />
+                    );
+                  }
+                })}
+              </div>
+            </div>
+          </div>
+
+          {/* cuadro 4 */}
+          <div className="flex  h-full w-w45 p-2 items-start justify-center">
+            <div className="contenedor-horario">
+              <p className="etiqueta2">Vista Horario</p>
+              <div className="vista-horario">
+                <div className="encabezado-horario">
+                  <div>Horario</div>
+                  <div>Lunes</div>
+                  <div>Martes</div>
+                  <div>Miercoles</div>
+                  <div>Jueves</div>
+                  <div>Viernes</div>
+                  <div>Sabado</div>
+                </div>
+                <Horario />
+              </div>
+            </div>
           </div>
         </div>
       </div>
