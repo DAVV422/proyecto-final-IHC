@@ -86,9 +86,7 @@ function Horario({horario}) {
             <hr></hr>
             <div >
                 <p className='hora'>22:00-22:45</p>            
-            </div>
-            <div className='nivel1-1'>
-            </div>                        
+            </div>                                   
         </>
     );
 }

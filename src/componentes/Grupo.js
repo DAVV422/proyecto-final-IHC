@@ -1,7 +1,7 @@
 import React from 'react';
 import '../hojas-de-estilo/Materia.css';
 
-function Grupo({ activar, grabar, grupo, sigla, nombre, id, id_materia, id_grupo, horario, docente, cupo}) {
+function Grupo({ activar, grabar, dias, horai, grupo, sigla, nombre, id, id_materia, id_grupo, horario, docente, cupo}) {
   //Cambiar de color el boton con la función activar
   return (
     <div className='contenedor-grupo'>
@@ -20,7 +20,7 @@ function Grupo({ activar, grabar, grupo, sigla, nombre, id, id_materia, id_grupo
           </div> 
       </div>
       {id==id_grupo &&
-        <div className='area-seleccionar' onClick={()=>grabar(id_materia, nombre, sigla, grupo, horario, docente)}>
+        <div className='area-seleccionar' onClick={()=>grabar(id_materia, nombre, sigla, dias, horai, grupo, horario, docente)}>
           <p className='texto-seleccionar'>SELECCIONAR</p>
         </div>
       }

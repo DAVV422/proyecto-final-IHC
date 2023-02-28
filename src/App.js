@@ -1,5 +1,6 @@
 import "./App.css";
 import Horario from "./componentes/Horario";
+import Hora from "./componentes/Hora";
 import Grupos from "./componentes/Grupo";
 import Materias from "./componentes/Materias";
 import Materia from "./componentes/Materia";
@@ -15,28 +16,41 @@ function App() {
   const [id_grupo, setId_grupo] = React.useState("");
 
   const [materias, setMaterias] = useState([]);
+  const [horarios, setHorarios] = useState([]);
 
   //Grabar las materias del grupo seleccionado
-  const grabar = (id_materia, nombre, sigla, grupo, docente, horario) => {
+  const grabar = (id_materia, nombre, sigla, dias, horai, grupo, docente, horario) => {    
     const materia = {
       id: id_materia,
+      dias_materia: dias,
+      horai_materia: horai, 
       nombre_materia: nombre,
       horario_materia: horario,
       sigla_materia: sigla,
       grupo_materia: grupo,
       docente_materia: docente,
     };
+    const horario_materia = {
+      id: id_materia,
+      sigla_materia:sigla,
+      grupo_materia: grupo,
+      dias_materia: dias,
+      horai_materia: horai,
+    }
     const materiasActualizadas = [materia, ...materias];
-    console.log(materiasActualizadas);
+    const horariosActualizadas = [horario_materia, ...horarios];    
     setMaterias(materiasActualizadas);
+    setHorarios(horariosActualizadas);
   };
 
   const eliminarMateria = (id_materia) => {
     const materiasActualizadas = materias.filter(
       (materia) => materia.id !== id_materia
     );
-    console.log(id_materia);
-    console.log(materiasActualizadas);
+    const horariosActualizadas = horarios.filter(
+      (horario) => horario.id !== id_materia
+    );
+    setHorarios(horariosActualizadas);
     setMaterias(materiasActualizadas);
   };
 
@@ -98,7 +112,7 @@ function App() {
                         id={materia.id}
                         nombre={materia.nombre_materia}
                         sigla={materia.sigla_materia}
-                        grupo={materia.grupo_materia}
+                        grupo={materia.grupo_materia}                        
                         docente={materia.docente_materia}
                         horario={materia.horario_materia}
                       />
@@ -137,6 +151,8 @@ function App() {
                         id_grupo={id_grupo}
                         id={grupo.id}
                         id_materia={grupo.idMateria}
+                        dias={grupo.dias}
+                        horai={grupo.horaI}
                         grupo={grupo.grupo}
                         nombre={grupo.nombre}
                         sigla={grupo.sigla}
@@ -165,7 +181,18 @@ function App() {
                   <div>Viernes</div>
                   <div>Sabado</div>
                 </div>
-                <Horario />
+                <Horario/>                
+                {horarios.map((horario) => {
+                    return (
+                      <Hora                        
+                        id={horario.id_materia}                        
+                        sigla={horario.sigla_materia}
+                        grupo={horario.grupo_materia}                        
+                        dias={horario.dias_materia}
+                        horai={horario.horai_materia}
+                      />
+                    );
+                  })}                
               </div>
             </div>
           </div>
