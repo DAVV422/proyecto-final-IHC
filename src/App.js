@@ -49,8 +49,8 @@ function App() {
           </div>
           {datos_grupos.map((grupo) => {
             if(id_materia == grupo.idMateria){
-              return <Grupos activar={activar_grupo} id_grupo={id_grupo} id={grupo.id} materia_id={grupo.idMateria} 
-              grupo={grupo.grupo} nombre={grupo.nombre} sigla={grupo.sigla} docente={grupo.profe} cupo={grupo.cupos}/>
+              return <Grupos activar={activar_grupo} id_grupo={id_grupo} id={grupo.id} id_materia={grupo.idMateria} 
+              grupo={grupo.grupo} horario={grupo.horaString} docente={grupo.profe} cupo={grupo.cupos}/>
             }            
           })}
         </div>
