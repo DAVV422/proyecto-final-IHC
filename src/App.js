@@ -1,13 +1,12 @@
 import './App.css';
 import Grupo from './componentes/Grupo';
-import Materia from './componentes/Materia';
 import Materias from './componentes/Materias';
+import Materia from './componentes/Materia';
 import React, { useState } from 'react';
+import datos_materias from './data/materias';
 
 function App() {
 
-  const [input, setInput] = useState('');
-  
   //variable para determinar si el componente ha sido seleccionado
   const [active, setActive] = React.useState(false);    
 
@@ -24,19 +23,20 @@ function App() {
       <div className='area1'>
         <div className='contenedor1'>
           <p className='etiqueta1'>Seleccione la materia para ver su grupo:</p>
-          <Materias input={input}/>                                
+          {datos_materias.map((materia) => {
+            return <Materias active={active} activar={activar} id={materia.id} sigla={materia.sigla} nombre={materia.nombre} semestre={materia.semestre}/>
+          })}
         </div>
         <div className='contenedor2'>
           <p className='etiqueta2'>Materias a inscribir:</p>
-          <Materia input={input}/>                       
+          <Materia/>                       
         </div>
         <div className='contenedor3'>                              
           <div className='grupos-materia'>
             <p className='etiqueta1'>Grupos de Materia:</p>
             <p className='etiqueta2-2'> LIN100 | Inglés Técnico I</p>
           </div>
-          <Grupo 
-            input={input}  
+          <Grupo             
             active={active} 
             activar={activar}            
           /> 
