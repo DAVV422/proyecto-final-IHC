@@ -1,11 +1,11 @@
 import React from 'react';
 import '../hojas-de-estilo/Materia.css';
 
-const Materias = ({ input }) => (
-  <div className='materias'>
-    <p className='etiqueta2-sigla'> LIN100 | </p>
-    <p className='etiqueta-semestre'>1er Semestre</p>
-    <p className='etiqueta2-materia'> Inglés Técnico I</p>
+const Materias = ({ activar, id_materia, id, sigla, nombre, semestre }) => (
+  <div className={`materias ${(id==id_materia)?"active":""}`} onClick={() => activar(id)}>
+    <p className={`etiqueta-sigla ${(id==id_materia)?"active":""}`} onClick={() => activar(id)}> {sigla} | </p>
+    <p className='etiqueta-semestre'>{semestre}</p>
+    <p className={`etiqueta-materia ${(id==id_materia)?"active":""}`} onClick={() => activar(id)}> {nombre}</p>
   </div>
 ); 
 

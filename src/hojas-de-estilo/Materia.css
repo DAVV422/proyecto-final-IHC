@@ -15,34 +15,53 @@
   margin: 1px solid #888;  
 }
 
-.materia_seleccionada {
+.materias.active {
   height: 12%;
   border-radius: 10px;
   margin-bottom: 15px;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
+  display: flex;  
+  flex-wrap: wrap;
+  justify-content: start;
+  align-items: flex-start;
   font-weight: bold;
   font-size: 30px;
-  background-color: #CCFFD4;  
+  background-color: #13444F;
+  color: white;
   padding: 11px 30px 11px 11px;
   box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.13);
   margin: 1px solid #888;  
 }
 
-.materia_seleccionada:active {
+
+.materia_seleccionada {
   height: 12%;
+  width:90%;
   border-radius: 10px;
   margin-bottom: 15px;
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
+  flex-wrap: wrap;
+  justify-content: start;
+  align-items: flex-start;
   font-weight: bold;
   font-size: 30px;
-  background-color: #000000;  
-  padding: 11px 30px 11px 11px;
+  background-color: #CCFFD4;  
+  padding: 11px 13px 11px 11px;
   box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.13);
   margin: 1px solid #888;  
+}
+
+.texto{  
+  display: flex;
+  flex-wrap: wrap;
+  width:80%;
+}
+
+.icono{
+  margin-top: 0px;
+  margin-left: 19px;
+  justify-content: start; 
+  align-items: flex-end; 
+  width:10%;
 }
 
 .grupos {
@@ -75,4 +94,112 @@
   padding: 11px 30px 11px 11px;
   box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.13);
   margin: 1px solid #888;  
+}
+
+
+.etiqueta-sigla{  
+  margin-top: 0.2px;
+  margin-left: 2px;
+  margin-bottom: 6px;
+  font-family: 'Fredoka';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 17px;
+  /* identical to box height */
+  color: #000000;
+}
+
+.etiqueta-sigla.active{  
+  margin-top: 0.2px;
+  margin-left: 2px;
+  margin-bottom: 6px;
+  font-family: 'Fredoka';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 17px;
+  /* identical to box height */
+  color: #F3F3F3;
+}
+
+.etiqueta-materia{  
+  margin-top: 0px;  
+  margin-left: 2px;
+  font-family: 'Fredoka';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 17px;  
+  color: #000000;
+}
+
+.etiqueta-materia.active{  
+  margin-top: 0px;  
+  margin-left: 2px;
+  font-family: 'Fredoka';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 17px;  
+  color: #F3F3F3;
+}
+
+.etiqueta2-sigla{  
+  margin-top: -3px;
+  margin-left: 2px;
+  margin-bottom: 1px;
+  font-family: 'Fredoka';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 17px;
+  /* identical to box height */
+  color: #13444F;
+}
+
+.etiqueta2-materia{  
+  margin-top: -2px;
+  margin-left: 15px;
+  margin-bottom: 1px;
+  font-family: 'Fredoka';
+  font-style: normal;  
+  font-size: 15px;   
+  color: #696969;
+}
+
+.etiqueta-docente{  
+  margin-top: -1px;
+  margin-left: 2.5px;
+  margin-bottom: 1px;
+  font-family: 'Fredoka';
+  font-style: normal;  
+  font-size: 12px;   
+  color: #696969;
+}
+
+.etiqueta-semestre{  
+  margin-top: 1.6px;
+  margin-left: 15px;
+  margin-bottom: 0.3px;
+  font-family: 'Fredoka';
+  font-style: normal;  
+  font-size: 15px;    
+  color: #696969;
+}
+
+.tarea-icono {
+  width: 25px;
+  height: 25px;
+  margin: 5px;
+}
+
+.etiqueta-horario{  
+  margin-top: 0px;
+  margin-left: 3px;
+  margin-bottom: 0.4px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-style: normal;  
+  font-size: 13px;    
+  color: #000000;
 }

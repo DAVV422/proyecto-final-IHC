@@ -1,0 +1,14 @@
+{
+    "materias":[
+        {
+            "sigla":"MAT101",
+            "nombre":"Cálculo I",
+            "semestre":"1er Semestre"
+        },
+        {
+            "sigla":"INF119",
+            "nombre":"Estructuras Discretas",
+            "semestre":"2do Semestre"
+        }
+    ]
+}
