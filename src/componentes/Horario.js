@@ -4,7 +4,7 @@ import '../hojas-de-estilo/Horario.css';
 function Horario() {
     return (
         <>
-            <div >
+            <div>
                 <p className='hora'>07:00-07:45</p>            
             </div>
             <hr></hr>
@@ -87,6 +87,8 @@ function Horario() {
             <div >
                 <p className='hora'>22:00-22:45</p>            
             </div>
+            <div className='horario-materia'>
+            </div>            
         </>
     );
 }

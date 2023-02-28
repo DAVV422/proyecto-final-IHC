@@ -1,3 +1,8 @@
+.padre{
+    position:relative;
+    background-color: green;
+}
+
 .hora{
     margin-top: 0px;
     margin-bottom: 2px;
@@ -9,4 +14,21 @@ hr{
     margin-left: 1px;
     width: 99%;    
     border: 0.5px solid #D9D9D9;
+}
+
+.horario-materia{
+    height: 100%;
+    width: 6%;
+    margin-top: -542px;    
+    margin-left: 13%; 
+    display: flex;    
+    justify-content: start;
+    align-items: flex-start;
+    border-radius: 10px;  
+    background-color: #13444F;
+    color: white;
+    padding: 11px 30px 11px 11px;
+    box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.13);
+    margin: 1px solid #888;  
+    position: relative;
 }

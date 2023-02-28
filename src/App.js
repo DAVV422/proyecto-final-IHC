@@ -89,7 +89,7 @@ function App() {
                 <div>Viernes</div>
                 <div>Sabado</div>
             </div>
-            <Horario/>
+            <Horario/>            
           </div>          
         </div>        
       </div>      
