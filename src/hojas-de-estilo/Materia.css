@@ -58,8 +58,8 @@
 
 .texto2{  
   display: flex;
-  flex-wrap: wrap;
-  width: 40%;
+  flex-direction: column;
+  width: 50%;
   margin-left:10px;  
 }
 
@@ -67,8 +67,7 @@
   display: flex;
   flex-direction: column;
   justify-content: end;
-  width: 46%;
-  margin-left:10px;  
+  width: 20%;   
 }
 
 .icono{
@@ -80,10 +79,11 @@
 }
 
 .grupos {
-  height: 20%;
+  height: 100%;
+  width: 100%;
   border-radius: 10px;
-  margin-top: 1px;
-  margin-bottom: 15px;  
+  margin-top: -7%;    
+  margin-bottom: 8%;
   display: flex;
   flex-wrap: wrap;
   justify-content: start;
@@ -98,12 +98,15 @@
 }
 
 .grupos.active {
-  height: 20%;
+  height: 100%;
+  width: 75%;
   border-radius: 10px;
-  margin-top: 1px;
-  margin-bottom: 15px;  
-  justify-content: flex-end;
-  align-items: center;
+  margin-top: -39px;
+  margin-bottom: 8px;  
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  align-items: flex-start;
   font-weight: bold;
   font-size: 30px;
   background-color: #13444F;
@@ -197,12 +200,22 @@
 
 .etiqueta-docente2{  
   margin-top: 0px;
-  margin-left: 2.5px;
+  margin-left: -23px;
   margin-bottom: 1px;
   font-family: 'Fredoka';
   font-style: normal;  
   font-size: 13px;   
   color: #696969;
+}
+
+.etiqueta-docente2.active{  
+  margin-top: 0px;
+  margin-left: -5px;
+  margin-bottom: 1px;
+  font-family: 'Fredoka';
+  font-style: normal;  
+  font-size: 13px;   
+  color: #D9D9D9;
 }
 
 .etiqueta-semestre{  
@@ -213,6 +226,16 @@
   font-style: normal;  
   font-size: 15px;    
   color: #696969;
+}
+
+.etiqueta-semestre.active{  
+  margin-top: 1.6px;
+  margin-left: 15px;
+  margin-bottom: 0.3px;
+  font-family: 'Fredoka';
+  font-style: normal;  
+  font-size: 15px;    
+  color: #D9D9D9;
 }
 
 .tarea-icono {
@@ -233,7 +256,7 @@
 
 .etiqueta-horario2{  
   margin-top: -2px;
-  margin-left: 3px;
+  margin-left: -24px;
   margin-bottom: 0.5px;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   font-style: normal;  
@@ -241,9 +264,19 @@
   color: #000000;
 }
 
+.etiqueta-horario2.active{  
+  margin-top: -2px;
+  margin-left: -5px;
+  margin-bottom: 0.5px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-style: normal;  
+  font-size: 16px;    
+  color: #F3F3F3;
+}
+
 .grupo{
   height:100%;
-  width: 10%;
+  width: 15%;
   display: flex;
   flex-wrap: wrap;
   justify-content: start;
@@ -262,9 +295,21 @@
   color: #13444F; 
 }
 
+.etiqueta-sigla3.active{
+  margin-top: 5px;
+  margin-left: 2px;
+  margin-bottom: 6px;
+  font-family: 'Fredoka';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 17px;  
+  color: #F3F3F3; 
+}
+
 .cupos{
   margin-top: 0px;
-  margin-left: 90%;
+  margin-left: 150%;
   margin-bottom: 6px;  
   font-family: 'Fredoka';
   font-style: normal;
@@ -274,9 +319,21 @@
   color: #13444F; 
 }
 
+.cupos.active{
+  margin-top: 0px;
+  margin-left: 150%;
+  margin-bottom: 6px;  
+  font-family: 'Fredoka';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 15px;  
+  color: #F3F3F3; 
+}
+
 .texto-cupos{
   margin-top: 1px;
-  margin-left: 90%;
+  margin-left: 149%;
   margin-bottom: 6px;  
   font-family: 'Fredoka';
   font-style: normal;
@@ -286,6 +343,30 @@
   color: #13444F; 
 }
 
+.texto-cupos.active{
+  margin-top: 1px;
+  margin-left: 149%;
+  margin-bottom: 6px;  
+  font-family: 'Fredoka';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 10px;
+  line-height: 15px;  
+  color: #F3F3F3; 
+}
+
+.texto-seleccionar{
+  width: 100%;
+  margin-top: 20%;
+  margin-left: 1%;
+  margin-bottom: 6px;  
+  font-family: 'Fredoka';
+  font-style: normal;
+  font-weight: bolder;
+  font-size: 10px;  
+  line-height: 15px;  
+  color: #F3F3F3;  
+}
 
 .barra-grupo{
   margin-top: 3px;
@@ -297,4 +378,34 @@
   font-size: 30px;
   line-height: 17px;  
   color: #13444F; 
+}
+
+.barra-grupo.active{
+  margin-top: 3px;
+  margin-left: 3px;
+  margin-bottom: 6px;
+  font-family: 'Fredoka';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 17px;  
+  color: #F3F3F3; 
+}
+
+.area-seleccionar{
+  height: 100%;
+  width: 10%;
+  margin-top: -39px;
+  margin-bottom: 8px;
+  margin-left: 2px; 
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  align-items: flex-start;
+  border-radius: 10px;  
+  background-color: #13444F;
+  color: white;
+  padding: 11px 30px 11px 11px;
+  box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.13);
+  margin: 1px solid #888;  
 }

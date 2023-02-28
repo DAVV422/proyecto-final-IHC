@@ -94,7 +94,17 @@
 .grupos-materia{  
   width: 100%; 
   height: 17%;     
+  display: flex;    
+}
+
+.contenedor-grupo{  
+  width: 100%;  
+  height: 25%;     
+  margin-top: 7%;
+  justify-content: start;
+  align-items: flex-start;
   display: flex;  
+  flex-flow: row wrap;  
 }
 
 .fila {
