@@ -1,7 +1,7 @@
 import React from 'react';
 import '../hojas-de-estilo/Horario.css';
 
-function Horario() {
+function Horario({horario}) {
     return (
         <>
             <div>
@@ -87,8 +87,8 @@ function Horario() {
             <div >
                 <p className='hora'>22:00-22:45</p>            
             </div>
-            <div className='horario-materia'>
-            </div>            
+            <div className='nivel1-1'>
+            </div>                        
         </>
     );
 }

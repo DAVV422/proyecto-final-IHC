@@ -127,12 +127,11 @@
 .contenedor-horario{
   margin-top: 0px;  
   width: 90%;
-  height: 95%;
+  height: 93%;
   padding: 14px;
   background-color: #EEEEEE;
   border-radius: 20px;  
-  justify-content: center;
-  overflow-y: auto;
+  justify-content: center;  
 }
 
 .grupos-materia{  
@@ -207,7 +206,7 @@ h1{
 }
 
 .encabezado-horario {  
-  width: 93%;  
+  width: 100%;  
   margin-top: 0px;
   margin-bottom: 8px;  
   display: flex;  
@@ -216,7 +215,7 @@ h1{
   font-size: 15px;
   background-color: #4D6165;
   color: white;
-  padding: 11px 30px 11px 11px;
+  padding: 11px 11px 11px 11px;
   box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.13);
   margin: 1px solid #888;  
 }
