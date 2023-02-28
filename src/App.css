@@ -82,7 +82,7 @@
 }
 
 .contenedor-horario{
-  margin-top: 4.5%;  
+  margin-top: 3%;  
   width: 90%;
   height: 78%;
   padding: 14px;
@@ -160,4 +160,20 @@ h1{
 
 .seleccionado{
   color: #000000;
+}
+
+.encabezado-horario {
+  height: 100%;
+  width: 93%;  
+  margin-top: 0px;
+  margin-bottom: 8px;  
+  display: flex;  
+  justify-content: space-between;  
+  font-weight: bold;
+  font-size: 15px;
+  background-color: #4D6165;
+  color: white;
+  padding: 11px 30px 11px 11px;
+  box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.13);
+  margin: 1px solid #888;  
 }

@@ -1,4 +1,5 @@
 import './App.css';
+import Horario from './componentes/Horario';
 import Grupos from './componentes/Grupo';
 import Materias from './componentes/Materias';
 import Materia from './componentes/Materia';
@@ -75,8 +76,21 @@ function App() {
           })}
         </div>
       </div>   
-      <div className='area2'>        
-        <div className='contenedor-horario'>                                        
+      <div className='area2'>                
+        <div className='contenedor-horario'>  
+          <p className='etiqueta2'>Vista Horario</p>
+          <div className='vista-horario'>
+            <div className='encabezado-horario'>
+                <div>Horario</div>
+                <div>Lunes</div>
+                <div>Martes</div>
+                <div>Miercoles</div>
+                <div>Jueves</div>
+                <div>Viernes</div>
+                <div>Sabado</div>
+            </div>
+            <Horario/>
+          </div>          
         </div>        
       </div>      
     </div>
