@@ -20,7 +20,7 @@ function Grupo({ activar, grabar, grupo, sigla, nombre, id, id_materia, id_grupo
           </div> 
       </div>
       {id==id_grupo &&
-        <div className='area-seleccionar' onClick={()=>grabar(id_materia, nombre, sigla, horario, docente)}>
+        <div className='area-seleccionar' onClick={()=>grabar(id_materia, nombre, sigla, grupo, horario, docente)}>
           <p className='texto-seleccionar'>SELECCIONAR</p>
         </div>
       }
