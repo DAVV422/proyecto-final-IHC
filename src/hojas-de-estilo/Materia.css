@@ -110,6 +110,19 @@
   color: #000000;
 }
 
+.etiqueta-sigla.active{  
+  margin-top: 0.2px;
+  margin-left: 2px;
+  margin-bottom: 6px;
+  font-family: 'Fredoka';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 17px;
+  /* identical to box height */
+  color: #F3F3F3;
+}
+
 .etiqueta-materia{  
   margin-top: 0px;  
   margin-left: 2px;
@@ -119,6 +132,17 @@
   font-size: 20px;
   line-height: 17px;  
   color: #000000;
+}
+
+.etiqueta-materia.active{  
+  margin-top: 0px;  
+  margin-left: 2px;
+  font-family: 'Fredoka';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 17px;  
+  color: #F3F3F3;
 }
 
 .etiqueta2-sigla{  

@@ -1,4 +1,4 @@
-export const gruposMaterias = [
+const gruposMaterias = [
 
 
 //Calculo 1 --------------------------------------------------------------------------------
@@ -507,3 +507,5 @@ export const gruposMaterias = [
     },
 
 ]
+
+export default gruposMaterias;
